@@ -35,3 +35,7 @@ if __name__ == '__main__':
     print AND2(1,0)# 输出0
     print AND2(0,1)# 输出0
     print AND2(1,1)# 输出1
+    # 测试数据的列表
+    for xs in [(0,0),(1,0),(0,1),(1,1)]:
+        y = AND2(xs[0],xs[1])
+        print(str(xs) + " -> " + str(y))
