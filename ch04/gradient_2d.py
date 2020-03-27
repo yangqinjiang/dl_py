@@ -53,11 +53,14 @@ if __name__ == '__main__':
     
     X = X.flatten()
     Y = Y.flatten()
-
+   #这里我们画的是元素值为负梯度 的向量
     grad = numerical_gradient(function_2,np.array([X,Y]))
     #print(grad)
 
     plt.figure()
+    #  用于画二维的箭头
+    #  quiver(X, Y, U, V, **kw)
+    #  U、V是箭头数据（data），X、Y是箭头的位置
     plt.quiver(X,Y,-grad[0],-grad[1])
     plt.xlim([-2,2])
     plt.ylim([-2,2])
