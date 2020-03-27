@@ -4,6 +4,9 @@ import numpy as np
 def sigmoid(x):
     return 1 / (1 + np.exp(-x))
 
+# sigmoid的反向传播梯度
+def sigmoid_grad(x):
+    return (1.0 - sigmoid(x)) * sigmoid(x)
 
 def softmax(x):
     if x.ndim == 2:
