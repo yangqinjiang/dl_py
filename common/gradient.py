@@ -32,6 +32,9 @@ def numerical_gradient_2d(f,X):
 
 
 # 适用于任意维度的数值微分
+# 为了对应形状为多维数组的权重参数W，这里使用的 numerical_
+# gradient()和之前的实现稍有不同。不过，改动只是为了对应多维
+# 数组，所以改动并不大
 def numerical_gradient(f,x):
     h = 1e-4 # 0.0001
     grad = np.zeros_like(x)
