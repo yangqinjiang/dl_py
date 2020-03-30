@@ -8,6 +8,12 @@ def sigmoid(x):
 def sigmoid_grad(x):
     return (1.0 - sigmoid(x)) * sigmoid(x)
 
+def ReLU(x):
+    return np.maximum(0,x)
+
+def tanh(x):
+    return np.tanh(x)
+
 def softmax(x):
     if x.ndim == 2:
         x = x.T
