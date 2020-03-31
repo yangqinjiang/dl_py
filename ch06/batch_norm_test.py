@@ -21,7 +21,7 @@ learning_rate = 0.01
 
 def __train(weight_init_std):
     bn_network = MultiLayerNetExtend(input_size=784,hidden_size_list=[100,100,100,100,100],output_size=10,
-                                    weight_init_std=weight_init_std,use_batchNorm=True)
+                                    weight_init_std=weight_init_std,use_batchnorm=True)
     network = MultiLayerNetExtend(input_size=784,hidden_size_list=[100,100,100,100,100],output_size=10,
                                     weight_init_std=weight_init_std)
     optimizer = SGD(lr=learning_rate)

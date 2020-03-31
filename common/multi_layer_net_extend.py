@@ -23,19 +23,19 @@ class MultiLayerNetExtend:
     weight_decay_lambda: Weight Decay (L2范数) 的强度
     use_dropout: 是否使用Dropout
     dropout_ration: Dropout的比例
-    use_batchNorm: 是否使用Batch Normalization
+    use_batchnorm: 是否使用Batch Normalization
     """
 
     def __init__(self,input_size,hidden_size_list,output_size,
                 activation='relu',weight_init_std='relu',weight_decay_lambda=0,
-                use_dropout=False,dropout_ration=0.5,use_batchNorm=False):
+                use_dropout=False,dropout_ration=0.5,use_batchnorm=False):
         self.input_size = input_size
         self.output_size = output_size
         self.hidden_size_list = hidden_size_list
         self.hidden_layer_num = len(hidden_size_list)
         self.use_dropout = use_dropout
         self.weight_decay_lambda = weight_decay_lambda
-        self.use_batchNorm = use_batchNorm
+        self.use_batchNorm = use_batchnorm
         self.params = {}
         #初始化权重
         self.__init_weight(weight_init_std)
