@@ -7,7 +7,7 @@ from collections import OrderedDict
 from common.layers import *
 
 class DeepConvNet:
-    """识别率为99%以上的高精度的ConvNet
+    """识别率为99%以上的高精度的ConvNet, 共21层
 
     网络结构如下所示
         conv - relu - conv - relu - pool -
